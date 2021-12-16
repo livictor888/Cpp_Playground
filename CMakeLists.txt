@@ -5,3 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(C__Playground main.cpp)
 add_executable(functions functions.cpp)
+
+add_executable(Car CarLot.cpp Vehicle.h)
