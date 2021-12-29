@@ -8,7 +8,7 @@ private:
     vector<Vehicle> cars;
 public:
     CarLot();
-    void createAndAddCar(string vin, string name, Colour colour, int price, int odometer);
+    void createAndAddCar(string vin, string name, int year, Colour colour, int price, int odometer);
     void addCar(Vehicle car);
     void removeCar(Vehicle car);
     void generateStreamAndPerformServices();
@@ -20,7 +20,7 @@ CarLot::CarLot() {
 
 }
 
-void CarLot::createAndAddCar(string vin, string name, Colour colour, int price, int odometer) {
+void CarLot::createAndAddCar(string vin, string name, int year, Colour colour, int price, int odometer) {
 
 }
 
@@ -52,16 +52,17 @@ string toString() {
 }
 
 int main() {
-    Vehicle toyota = Vehicle("234ads", "Toyota", JET_BLACK, 15'000, 250'000);
-    Vehicle honda =  Vehicle("123abc", "Honda", CHERRY_RED,
+    Vehicle toyota = Vehicle("234ads", "Toyota", 1995, JET_BLACK, 15'000, 250'000);
+    Vehicle honda =  Vehicle("123abc", "Honda", 2002, CHERRY_RED,
                      20'000, 10'000);
     CarLot myCarLot;
     myCarLot.addCar(toyota);
     myCarLot.addCar(honda);
-    myCarLot.removeCar(toyota);
+    //myCarLot.removeCar(toyota);
 
     // cout << toyota.getOdometer();
     cout << toyota;
+    cout << honda;
     // cout << myCarLot;
     return 0;
 }

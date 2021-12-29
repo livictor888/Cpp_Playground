@@ -18,7 +18,7 @@ private:
     int odometer;
 
 public:
-    Vehicle(string vin, string name, Colour colour, int price, int odometer);
+    Vehicle(string vin, string name, int year, Colour colour, int price, int odometer);
 
     const string &getVin() const;
 
@@ -50,7 +50,7 @@ public:
 
 };
 
-Vehicle::Vehicle(string vin, string name, Colour colour, int price, int odometer) {
+Vehicle::Vehicle(string vin, string name, int year, Colour colour, int price, int odometer) {
     this->vin = vin;
     this->name = name;
     this->colour = colour;
@@ -119,9 +119,8 @@ bool Vehicle::operator!=(const Vehicle &rhs) const {
 }
 
 ostream &operator<<(ostream &os, const Vehicle &vehicle) {
-    os << "vin: " << vehicle.vin << " name: " << vehicle.name << " year: " << vehicle.year << " colour: "
-       << vehicle.colour << " price: " << vehicle.price << " isElectric: " << vehicle.isElectric << " numberOfDoors: "
-       << vehicle.numberOfDoors << " numberOfWheelDrive: " << vehicle.numberOfWheelDrive << " odometer: "
-       << vehicle.odometer;
+    os << "vin: " << vehicle.vin << " name: " << vehicle.name << " year: " << " colour: "
+       << vehicle.colour << " price: " << vehicle.price << " odometer: "
+       << vehicle.odometer << "\n";
     return os;
 }
